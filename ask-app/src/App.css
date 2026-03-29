@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.screen {
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
+}
+
+.box {
+  background-color: #1a1a1a;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 90%;
+  width: 400px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.text {
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* Final spam mode */
+.spam {
+  font-size: 20px;
+  line-height: 1.5;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px;
+}
+/* Remove scrollbars for full spam effect */
+body {
+  overflow: hidden;
+}
+
+.spam-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #111;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.popup {
+  position: absolute;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  pointer-events: none;
+  animation: fade 1.5s ease-out forwards;
+  white-space: nowrap;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}

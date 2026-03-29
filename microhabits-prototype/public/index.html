@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MicroHabits - Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>MicroHabits</h1>
+      <div id="user-area">
+        <a id="login" href="/auth/google">Sign in with Google</a>
+        <a id="logout" href="/auth/logout" aria-hidden="true">Logout</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="create">
+        <h2>Create a micro-habit</h2>
+        <!-- Wrap controls in a form, add name attributes, keep JS-safe prevention -->
+        <form id="create-form" onsubmit="return false;">
+          <label for="habit-title" class="visually-hidden">Title</label>
+          <input id="habit-title" name="habitTitle" type="text" placeholder="Title" />
+          <label for="habit-desc" class="visually-hidden">Short description</label>
+          <input id="habit-desc" name="habitDesc" type="text" placeholder="Short description" />
+          <button id="create-btn" type="submit">Create</button>
+        </form>
+      </section>
+
+      <section id="habits-list">
+        <h2>Habits</h2>
+        <div id="habits"></div>
+      </section>
+
+      <section id="proofs">
+        <h2>Proofs for <span id="current-habit-title"></span></h2>
+        <form id="upload-form">
+          <label for="media">Upload proof</label>
+          <input type="file" id="media" name="media" />
+          <button type="submit">Upload Proof</button>
+        </form>
+        <div id="proofs-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

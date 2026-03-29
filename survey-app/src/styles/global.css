@@ -1,0 +1,43 @@
+/* Global Styles */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark theme background */
+    color: #ffffff; /* Light text for dark theme */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Full-screen layout */
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Links and buttons */
+  a, button {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  input, button {
+    font-family: inherit;
+    font-size: inherit;
+    color: #000000; /* Dark text for inputs */
+    background-color: #ffffff; /* Light background for inputs */
+  }
